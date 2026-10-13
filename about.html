@@ -67,6 +67,10 @@
 .contact .big{margin:0 auto 40px;max-width:760px}
 .contact .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .contact .addr{margin-top:40px;font-size:14px;opacity:.55;line-height:1.8}
+.cta.kakao{background:#fee500;color:#191600}
+.contact .sns{margin-top:26px;font-size:14px;opacity:.75}
+.contact .sns a{color:inherit;text-underline-offset:3px}
+footer .fl a{color:inherit;text-decoration:none;margin-left:16px}footer .fl a:hover{text-decoration:underline}
 @media(max-width:900px){.name{grid-template-columns:1fr;gap:20px}.notes{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(odd){border-left:0}.hero .lead br{display:none}.step::after{display:none}
 .row{grid-template-columns:44px 1fr 30px}.row p{grid-column:2/4;margin-top:-10px}.who{grid-template-columns:1fr;text-align:center}.who .av{margin:0 auto}}
 @media(max-width:560px){.notes,.steps{grid-template-columns:1fr}.step{border-left:0;border-top:1px solid var(--line)}}
@@ -154,11 +158,12 @@
  <span class="lab rv" style="justify-content:center">Contact</span>
  <h2 class="rv">Let's <i>dig</i> yours.</h2>
  <p class="big rv">당신의 브랜드에 묻혀 있는 이야기, 같이 캐 볼까요?</p>
- <div class="btns rv"><a class="cta" href="mailto:kedakorea@gmail.com">메일로 문의하기 →</a><a class="cta ghost" href="work.html">작업 먼저 보기</a></div>
+ <div class="btns rv"><a class="cta" href="mailto:kedakorea@gmail.com">메일로 문의하기 →</a><a class="cta kakao" href="https://pf.kakao.com/_gMxogd" target="_blank" rel="noopener">카카오톡으로 문의하기 →</a><a class="cta ghost" href="https://www.instagram.com/brandium__official/" target="_blank" rel="noopener">인스타그램 보기 ↗</a></div>
+ <p class="sns rv">브랜디움 · Brandium — 캐다가 운영하는 채널 <a href="https://www.instagram.com/brandium__official/" target="_blank" rel="noopener">Instagram @brandium__official</a> · <a href="https://pf.kakao.com/_gMxogd" target="_blank" rel="noopener">KakaoTalk 채널</a></p>
  <p class="addr rv">주식회사 캐다 · keda Co., Ltd.<br>인천광역시 부평구 길주로647번길 20, 801호 A35 · kedakorea@gmail.com</p>
 </div></section>
 
-<footer><span>© 2026 keda Co., Ltd. — We Dig Your Brand</span><span>Brand Content Studio · Incheon, Korea</span></footer>
+<footer><span>© 2026 keda Co., Ltd. — We Dig Your Brand</span><span class="fl">Brand Content Studio · Incheon, Korea<a href="https://www.instagram.com/brandium__official/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://pf.kakao.com/_gMxogd" target="_blank" rel="noopener">KakaoTalk ↗</a></span></footer>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
