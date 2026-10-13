@@ -39,3 +39,6 @@ footer{border-top:1px solid var(--line);padding:40px 34px;display:flex;justify-c
 
 header nav a.pos{border:1.5px solid #fff;border-radius:999px;padding:6px 14px;margin:-7px 0;font-weight:700}header nav a.pos:hover{background:#fff;color:#000}
 @media(max-width:700px){header nav a.pos{padding:4px 10px}}
+header .hlogo{display:block;line-height:0}header .hlogo img{height:30px;width:auto;display:block}
+@media(max-width:700px){header .hlogo img{height:23px}}
+@media(max-width:430px){header{padding:14px 14px}header .hlogo img{height:20px}header nav{gap:11px;font-size:11.5px}header nav a.pos{padding:4px 9px}}
