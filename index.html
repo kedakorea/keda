@@ -84,6 +84,85 @@ header .hlogo{display:block;line-height:0}header .hlogo img{height:32px;width:au
  <p class="hint"><i></i>카드를 치워 보세요 · drag &amp; dig</p>
 </div></section>
 
+<section class="vs" id="why">
+ <div class="vw">
+  <p class="vlab">Why keda</p>
+  <h2 class="vh">누구나 AI로 만드는 시대,<br>변별력은 <i>AI스럽지 않음</i>에서 나옵니다.</h2>
+  <div class="vint"><p>캐다 대표는 디자이너 출신입니다. AI가 금방 만들어 주는 '그럴듯함'과, 브랜드에 맞게 설계된 디자인은 한눈에 다릅니다. 직접 밀어서 비교해 보세요.</p><div class="vstat"><b>10<span>년+</span></b>디자인 · 브랜딩 실무</div></div>
+  <div class="vtabs" role="tablist"></div>
+  <div class="vcmp" id="vcmp">
+   <img class="vk" alt="캐다가 만든 시안">
+   <div class="va"><img alt="AI로 딸깍 만든 시안"></div>
+   <span class="vt l">AI 딸깍</span><span class="vt r">keda</span>
+   <div class="vbar"><i>⟷</i></div>
+  </div>
+  <div class="vtbl"></div>
+  <p class="vnote">* 비교용 가상 브랜드 'ondo°'(동네 로스터리, 5주년 팝업). 양쪽 모두 같은 조건으로 만든 예시입니다.</p>
+ </div>
+</section>
+<style>
+.vs{padding:120px 0 110px;border-top:1px solid rgba(242,232,214,.14);position:relative;z-index:2;background:var(--soil)}
+.vw{max-width:1240px;margin:0 auto;padding:0 34px}
+.vlab{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;display:flex;align-items:center;gap:10px}
+.vlab::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.vh{font-family:Pretendard,sans-serif;font-weight:800;font-size:clamp(30px,4.4vw,64px);line-height:1.22;letter-spacing:-.035em;margin:20px 0 30px;word-break:keep-all}
+.vh i{font-family:'Instrument Serif',serif;font-weight:400;font-size:1.12em;letter-spacing:-.01em;color:var(--lime)}
+.vint{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:46px;word-break:keep-all}
+.vint p{max-width:620px;font-size:clamp(16px,1.4vw,19px);line-height:1.7;opacity:.82}
+.vstat{text-align:right;font-size:14px;letter-spacing:.06em;opacity:.9;white-space:nowrap}
+.vstat b{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(64px,7vw,108px);line-height:.9;color:var(--lime);letter-spacing:-.03em}
+.vstat b span{font-family:Pretendard;font-size:.32em;font-weight:800;margin-left:4px;letter-spacing:0}
+.vtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.vtabs button{font:inherit;font-size:15px;font-weight:700;padding:10px 20px;border-radius:999px;border:1.5px solid rgba(242,232,214,.35);background:none;color:var(--cream);cursor:pointer;transition:.2s}
+.vtabs button:hover{border-color:var(--cream)}
+.vtabs button.on{background:var(--lime);border-color:var(--lime);color:var(--soil)}
+.vcmp{position:relative;border-radius:14px;overflow:hidden;background:#0d0a08;user-select:none;touch-action:pan-y;cursor:ew-resize;--x:50%;max-height:78vh;display:flex;justify-content:center}
+.vcmp img{display:block;max-width:100%;max-height:78vh;width:auto;height:auto;pointer-events:none}
+.vcmp .vk{position:relative}
+.vcmp .va{position:absolute;inset:0;display:flex;justify-content:center;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.vcmp .vt{position:absolute;top:16px;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.04em;z-index:3}
+.vcmp .vt.l{left:16px;background:rgba(0,0,0,.6);color:#fff}
+.vcmp .vt.r{right:16px;background:var(--lime);color:var(--soil)}
+.vcmp .vbar{position:absolute;top:0;bottom:0;left:var(--x);width:3px;margin-left:-1.5px;background:var(--lime);z-index:2}
+.vcmp .vbar i{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:var(--lime);color:var(--soil);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;font-size:20px;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.vtbl{margin-top:26px;border-top:1px solid rgba(242,232,214,.2)}
+.vtbl .row{display:grid;grid-template-columns:130px 1fr 1fr;gap:24px;padding:16px 0;border-bottom:1px solid rgba(242,232,214,.12);font-size:15px;line-height:1.55;word-break:keep-all}
+.vtbl .row.h{font-size:12px;letter-spacing:.14em;opacity:.55;padding:12px 0}
+.vtbl .row b{font-weight:800}
+.vtbl .row .a{opacity:.55}
+.vtbl .row .k{color:var(--cream)}
+.vtbl .row .k::before{content:"● ";color:var(--lime);font-size:10px;vertical-align:2px}
+.vnote{margin-top:18px;font-size:12px;opacity:.45}
+@media(max-width:760px){.vw{padding:0 18px}.vs{padding:80px 0}.vint{flex-direction:column;align-items:flex-start;gap:20px}.vstat{text-align:left}
+.vtbl .row{grid-template-columns:1fr 1fr;gap:6px 16px}.vtbl .row b{grid-column:1/-1}.vtbl .row.h b{display:none}.vtabs button{font-size:13px;padding:8px 14px}.vcmp{max-height:none}.vcmp img{max-height:none}}
+</style>
+<script>
+(()=>{
+const D={
+ site:['사이트',[['컨셉','"프리미엄 커피 여정" — 어느 카페에 붙여도 되는 말','브랜드만의 숫자 92° 하나로 이야기를 시작'],['컬러','보라·핑크 그라데이션과 네온 빛','테라코타·크림·원두색 — 커피에서 뽑은 3색'],['타이포','가운데 정렬 굵은 고딕, 그라데이션 글자','세리프 숫자와 고딕 카피의 대비, 크기 위계가 분명'],['레이아웃','유리 카드 3개 반복','좌우 분할 그리드, 여백으로 시선을 끎'],['디테일','이모지 아이콘·반짝이','오늘의 원두·로스팅 요일 같은 진짜 정보']]],
+ poster:['포스터',[['컨셉','흔한 "그랜드 이벤트" 축하','"다섯 번의 겨울을 볶았습니다" — 5년을 로스터리의 말로'],['위계','모든 요소가 커서 아무것도 안 읽힘','숫자 5 → 헤드라인 → 정보, 읽는 순서를 설계'],['정보','이모지 목록과 느낌표','일시·장소·프로그램을 그리드로 정리'],['장치','반짝이·폭죽','92°에 표시된 온도계 — 브랜드 상징을 반복']]],
+ logo:['로고',[['형태','컵+김 아이콘 + 대문자 이름, 어디서 본 조합','이름 끝 "°" 하나로 의미 완성'],['의미','커피=컵, 1차 연상에서 멈춤','92°C — 물이 원두를 만나는 온도'],['확장','그라데이션이라 인쇄·스탬프에서 깨짐','스탬프·컵 슬리브·간판까지 단색으로 그대로'],['체계','색 규정 없음','3색 팔레트와 색상 코드까지 정리']]],
+ content:['콘텐츠',[['주제','어디서나 본 "꿀팁 5가지"','우리 가게만 말할 수 있는 "온도" 한 가지'],['첫 장','목록을 다 보여줘서 넘길 이유가 없음','질문을 던지고 다음 장으로 넘기게 설계'],['시각','이모지 번호 + 유리 박스','85°·92°·98° 온도 막대로 한눈에'],['운영','해시태그 나열','시리즈명(HOME BREW NOTE 01)으로 연재 구조']]],
+ zone:['포토존',[['컨셉','풍선 아치 + 네온 문구, 어느 행사인지 모름','원 프레임 = 위에서 본 커피잔, 들어서면 "오늘의 온도"'],['사진','장식이 사람보다 시끄러움','사람이 원 안에 서서 사진의 주인공이 됨'],['브랜드','로고가 작고 묻힘','어디를 잘라도 92°와 테라코타가 남음'],['동선','설 자리가 없음','바닥 "STAND HERE" 표시로 줄과 각도를 정리']]],
+};
+const box=document.getElementById('vcmp'),tabs=document.querySelector('.vtabs'),tbl=document.querySelector('.vtbl');
+const kImg=box.querySelector('.vk'),aImg=box.querySelector('.va img');
+function show(k){
+ kImg.src='img/compare/kd-'+k+'.jpg';aImg.src='img/compare/ai-'+k+'.jpg';box.style.setProperty('--x','50%');
+ [...tabs.children].forEach(b=>b.classList.toggle('on',b.dataset.k===k));
+ tbl.innerHTML='<div class="row h"><b>항목</b><span>AI 딸깍</span><span>keda</span></div>'+D[k][1].map(([t,a,c])=>`<div class="row"><b>${t}</b><span class="a">${a}</span><span class="k">${c}</span></div>`).join('');
+}
+Object.entries(D).forEach(([k,[n]])=>{const b=document.createElement('button');b.textContent=n;b.dataset.k=k;b.onclick=()=>show(k);tabs.appendChild(b);});
+Object.keys(D).forEach(k=>{new Image().src='img/compare/kd-'+k+'.jpg';new Image().src='img/compare/ai-'+k+'.jpg';});
+let drag=false;
+const set=e=>{const r=kImg.getBoundingClientRect();const x=Math.min(Math.max(e.clientX-r.left,0),r.width);box.style.setProperty('--x',(r.left-box.getBoundingClientRect().left+x)+'px');};
+box.addEventListener('pointerdown',e=>{drag=true;box.setPointerCapture(e.pointerId);set(e);});
+box.addEventListener('pointermove',e=>{if(drag)set(e);});
+box.addEventListener('pointerup',()=>drag=false);box.addEventListener('pointercancel',()=>drag=false);
+show('site');
+})();
+</script>
+
 <section class="after"><p>브랜드의 가치는 이미 거기 있습니다.<br>다만 <span>보이지 않을 뿐.</span><br>캐다는 그걸 찾아서, 꺼내고, 닦습니다.</p><div class="go"><a href="work.html">캐낸 것들 보기 →</a><a href="about.html" class="g">캐다 알아보기</a></div></section>
 
 <footer><span>© 2026 keda Co., Ltd. — We Dig Your Brand</span><span class="fl">Brand Content Studio · Incheon, Korea<a href="https://www.instagram.com/brandium__official/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://pf.kakao.com/_gMxogd" target="_blank" rel="noopener">KakaoTalk ↗</a></span></footer>
