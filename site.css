@@ -30,15 +30,15 @@ h2 i{color:var(--lime)}
 .cta:hover{transform:translateY(-3px) rotate(-1deg)}
 .cta.ghost{background:none;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream)}
 footer{border-top:1px solid var(--line);padding:40px 34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;opacity:.6}
-.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;font-family:Pretendard,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.035em;font-size:clamp(30px,3.6vw,58px);line-height:1}
-.marquee div{display:inline-block;animation:mq 26s linear infinite}
-.marquee i{color:var(--lime);font-style:normal;margin:0 .35em}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;font-family:Pretendard,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.42em;font-size:clamp(12px,1.15vw,17px);line-height:1;opacity:.85}
+.marquee div{display:inline-block;animation:mq 40s linear infinite}
+.marquee i{color:var(--lime);font-style:normal;margin:0 1.1em}
 @keyframes mq{to{transform:translateX(-50%)}}
 @media(max-width:700px){header{padding:16px 18px}header nav{gap:14px;font-size:12px}.wrap{padding:0 18px}section{padding:76px 0}footer{padding:28px 18px}}
 @media(max-width:700px){.hero .sticker{width:78px !important;top:64px !important;right:14px !important}}
 
 header nav a.pos{border:1.5px solid #fff;border-radius:999px;padding:6px 14px;margin:-7px 0;font-weight:700}header nav a.pos:hover{background:#fff;color:#000}
 @media(max-width:700px){header nav a.pos{padding:4px 10px}}
-header .hlogo{display:block;line-height:0}header .hlogo img{height:26px;width:auto;display:block}
-@media(max-width:700px){header .hlogo img{height:21px}}
-@media(max-width:430px){header{padding:14px 14px}header .hlogo img{height:18px}header nav{gap:11px;font-size:11.5px}header nav a.pos{padding:4px 9px}}
+header .hlogo{display:block;line-height:0}header .hlogo img{height:32px;width:auto;display:block}
+@media(max-width:700px){header .hlogo img{height:25px}}
+@media(max-width:430px){header{padding:14px 14px}header .hlogo img{height:21px}header nav{gap:11px;font-size:11.5px}header nav a.pos{padding:4px 9px}}
