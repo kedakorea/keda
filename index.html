@@ -92,7 +92,7 @@ header .hlogo{display:block;line-height:0}header .hlogo img{height:32px;width:au
   <div class="vtabs" role="tablist"></div>
   <div class="vpair">
    <figure class="vside ai"><figcaption><span class="vx">✕</span>AI로 딸깍</figcaption><div class="vimg"><img alt="AI로 딸깍 만든 예시"></div><p>어디서 본 듯한, 누구 것도 아닌 결과물</p></figure>
-   <figure class="vside kd"><figcaption><span class="vo">✓</span>keda가 만들면</figcaption><div class="vimg"><img alt="캐다 작업 사례"><div class="vwait">실제 사례 준비 중</div></div><p class="vcap"></p></figure>
+   <figure class="vside kd"><figcaption><span class="vo">✓</span>keda가 만들면</figcaption><div class="vimg"><img alt="캐다 작업 사례"><div class="vlive"><iframe title="Personal OS 사이트 실제 화면" scrolling="no" tabindex="-1" loading="lazy"></iframe><a href="https://kedakorea.github.io/personal-os/" target="_blank" rel="noopener" aria-label="Personal OS 사이트 열기"><span>LIVE · 사이트 열기 ↗</span></a></div><div class="vwait">실제 사례 준비 중</div></div><p class="vcap"></p></figure>
   </div>
   <div class="vtbl"></div>
   <p class="vnote">* 왼쪽은 AI 도구로 흔히 나오는 결과물을 재현한 예시입니다.</p>
@@ -127,6 +127,12 @@ header .hlogo{display:block;line-height:0}header .hlogo img{height:32px;width:au
 .vside.kd .vimg{box-shadow:0 0 0 2px var(--lime)}
 .vwait{position:absolute;inset:0;display:none;align-items:center;justify-content:center;border:2px dashed rgba(242,232,214,.3);border-radius:12px;font-size:15px;letter-spacing:.06em;opacity:.6;background:#1d1712}
 .vside.kd.empty .vwait{display:flex}.vside.kd.empty img{visibility:hidden}.vside.kd.empty .vimg{box-shadow:none}
+.vlive{position:absolute;inset:0;display:none;background:#f5ecd9}
+.vside.kd.live .vlive{display:block}.vside.kd.live img{visibility:hidden}
+.vlive iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform-origin:0 0;pointer-events:none}
+.vlive a{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;padding:12px;text-decoration:none}
+.vlive a span{font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(30,20,20,.82);color:#fff;padding:7px 11px;border-radius:999px;opacity:.85;transition:.2s}
+.vlive a:hover span{opacity:1;background:var(--lime);color:var(--soil)}
 .vside p{margin-top:12px;font-size:14px;opacity:.6;line-height:1.5}
 .vtbl{margin-top:34px;border-top:1px solid rgba(242,232,214,.2)}
 .vtbl .row{display:grid;grid-template-columns:130px 1fr 1fr;gap:24px;padding:16px 0;border-bottom:1px solid rgba(242,232,214,.12);font-size:15px;line-height:1.55;word-break:keep-all}
@@ -143,7 +149,7 @@ header .hlogo{display:block;line-height:0}header .hlogo img{height:32px;width:au
 (()=>{
 // kd: 캐다 실제 사례 이미지(없으면 '준비 중'), cap: 사례 설명, ar: 이미지 비율
 const D={
- site:{n:'사이트',ar:'16/10',kd:'img/compare/kd-site-pos.jpg',cap:'Personal OS 서비스 사이트 — keda × BRAND!UM',rows:[['컨셉','누구에게나 맞는 "프리미엄·혁신" 문구','브랜드만의 한 문장과 상징으로 시작'],['컬러','보라·핑크 그라데이션과 네온 빛','브랜드에서 뽑은 색만, 절제해서'],['타이포','가운데 정렬 굵은 고딕, 그라데이션 글자','크기·굵기 위계가 분명한 조판'],['구성','유리 카드 3개 반복','보는 순서를 설계한 레이아웃'],['디테일','이모지·반짝이','직접 그린 아이콘과 일러스트']]},
+ site:{n:'사이트',ar:'16/10',kd:'img/compare/kd-site-pos.jpg',live:'https://kedakorea.github.io/personal-os/',cap:'Personal OS 서비스 사이트 — keda × BRAND!UM',rows:[['컨셉','누구에게나 맞는 "프리미엄·혁신" 문구','브랜드만의 한 문장과 상징으로 시작'],['컬러','보라·핑크 그라데이션과 네온 빛','브랜드에서 뽑은 색만, 절제해서'],['타이포','가운데 정렬 굵은 고딕, 그라데이션 글자','크기·굵기 위계가 분명한 조판'],['구성','유리 카드 3개 반복','보는 순서를 설계한 레이아웃'],['디테일','이모지·반짝이','직접 그린 아이콘과 일러스트']]},
  poster:{n:'포스터',ar:'5/7',kd:'',cap:'',rows:[['컨셉','흔한 "그랜드 이벤트" 축하','그 행사만의 메시지 한 줄'],['위계','모든 요소가 커서 아무것도 안 읽힘','읽는 순서를 설계 — 핵심 → 제목 → 정보'],['정보','이모지 목록과 느낌표','일시·장소·내용을 그리드로 정리'],['장식','반짝이·폭죽','브랜드 상징을 반복해 기억에 남김']]},
  logo:{n:'로고',ar:'14/9',kd:'',cap:'',rows:[['형태','업종 아이콘 + 대문자 이름, 어디서 본 조합','이름 자체에서 찾아낸 형태'],['의미','커피=컵 같은 1차 연상에서 멈춤','브랜드 이야기가 담긴 한 획'],['확장','그라데이션이라 인쇄·스탬프에서 깨짐','단색으로 간판·스탬프·굿즈까지 그대로'],['체계','색·사용 규정 없음','색상 코드와 사용 규정까지 정리']]},
  content:{n:'콘텐츠',ar:'4/5',kd:'',cap:'',rows:[['주제','어디서나 본 "꿀팁 5가지"','그 브랜드만 말할 수 있는 주제'],['첫 장','목록을 다 보여줘서 넘길 이유가 없음','질문을 던지고 다음 장으로 넘기게 설계'],['시각','이모지 번호 + 유리 박스','정보를 한눈에 보이는 그림으로'],['운영','해시태그 나열','시리즈로 이어지는 연재 구조']]},
@@ -151,11 +157,21 @@ const D={
 };
 const tabs=document.querySelector('#why .vtabs'),tbl=document.querySelector('#why .vtbl');
 const ai=document.querySelector('#why .vside.ai'),kd=document.querySelector('#why .vside.kd');
+// 사이트 사례: 실제 Personal OS 첫 화면을 움직이는 그대로 축소해 보여 줌(1440×900 기준)
+const fr=kd.querySelector('.vlive iframe');
+const fit=()=>{fr.style.transform='scale('+(kd.querySelector('.vimg').clientWidth/1440)+')'};
+new ResizeObserver(fit).observe(kd.querySelector('.vimg'));
+fr.addEventListener('load',()=>{try{ // 같은 주소(kedakorea.github.io)라 떠 있는 버튼·이벤트 창을 감춤
+ const st=fr.contentDocument.createElement('style');
+ st.textContent='.float,.kakao,.teaser,.evt{display:none!important}html,body{overflow:hidden!important}';
+ fr.contentDocument.head.appendChild(st);}catch(e){}});
 function show(k){
  const d=D[k];
  [ai,kd].forEach(f=>f.querySelector('.vimg').style.setProperty('--ar',d.ar));
  ai.querySelector('img').src='img/compare/ai-'+k+'.jpg';
  kd.classList.toggle('empty',!d.kd);
+ kd.classList.toggle('live',!!d.live);
+ if(d.live&&!fr.src)fr.src=d.live;
  if(d.kd)kd.querySelector('img').src=d.kd;
  kd.querySelector('.vcap').textContent=d.cap;
  [...tabs.children].forEach(b=>b.classList.toggle('on',b.dataset.k===k));
