@@ -196,7 +196,7 @@ fr.addEventListener('load',()=>{try{ // 같은 주소(kedakorea.github.io)라 �
 function show(k){
  const d=D[k];
  [ai,kd].forEach(f=>f.querySelector('.vimg').style.setProperty('--ar',d.ar));
- ai.querySelector('img').src='img/compare/ai-'+k+'.jpg';
+ ai.querySelector('img').src='img/compare/ai-'+k+'.jpg?v=1013b';
  kd.classList.toggle('empty',!d.kd);
  kd.classList.toggle('live',!!d.live);
  if(d.live&&!fr.src)fr.src=d.live;
