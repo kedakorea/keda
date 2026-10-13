@@ -6,7 +6,7 @@ body{background:var(--soil);color:var(--cream);font-family:Pretendard,sans-serif
 a{color:inherit}
 header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 34px;font-size:14px;mix-blend-mode:difference;color:#fff}
 header b a{font-weight:700;letter-spacing:.02em;text-decoration:none}
-header nav{display:flex;gap:26px}header nav a{text-decoration:none;position:relative}
+header nav{display:flex;gap:26px;align-items:center}header nav a{text-decoration:none;position:relative}
 header nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:#fff}
 .serif{font-family:'Instrument Serif',serif;font-weight:400}
 .wrap{max-width:1240px;margin:0 auto;padding:0 34px}
@@ -36,3 +36,6 @@ footer{border-top:1px solid var(--line);padding:40px 34px;display:flex;justify-c
 @keyframes mq{to{transform:translateX(-50%)}}
 @media(max-width:700px){header{padding:16px 18px}header nav{gap:14px;font-size:12px}.wrap{padding:0 18px}section{padding:76px 0}footer{padding:28px 18px}}
 @media(max-width:700px){.hero .sticker{width:78px !important;top:64px !important;right:14px !important}}
+
+header nav a.pos{border:1.5px solid #fff;border-radius:999px;padding:6px 14px;margin:-7px 0;font-weight:700}header nav a.pos:hover{background:#fff;color:#000}
+@media(max-width:700px){header nav a.pos{padding:4px 10px}}
