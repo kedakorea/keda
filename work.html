@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work — keda</title>
+<meta name="description" content="캐다(keda)가 캐낸 브랜드들 — 디자인·콘텐츠·채널·행사">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+.hero{min-height:70vh}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.filters button{border:0;cursor:pointer;padding:11px 20px;border-radius:999px;font:700 15px Pretendard,sans-serif;background:none;color:var(--cream);box-shadow:inset 0 0 0 1.5px var(--line);transition:.2s}
+.filters button:hover{box-shadow:inset 0 0 0 1.5px var(--cream)}
+.filters button.on{background:var(--cream);color:var(--soil)}
+.filters button sup{font-size:11px;opacity:.6;margin-left:3px}
+.grid{columns:3;column-gap:22px;padding:30px 0 80px}
+.w{break-inside:avoid;margin-bottom:22px;cursor:pointer;border-radius:12px;overflow:hidden;background:var(--soil2);transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s;position:relative}
+.w:hover{transform:translateY(-6px) rotate(var(--r,-.6deg))}
+.w .im{position:relative;overflow:hidden;background:var(--cream)}
+.w img{display:block;width:100%;height:auto;transition:transform .6s}
+.w:hover img{transform:scale(1.05)}
+.w .num{position:absolute;left:14px;top:12px;font-family:'Instrument Serif',serif;font-size:26px;color:#fff;mix-blend-mode:difference}
+.w .meta{padding:18px 20px 22px}
+.w h3{font-size:19px;font-weight:900;letter-spacing:-.01em;line-height:1.35}
+.w .cl{font-size:13.5px;opacity:.6;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-size:11.5px;font-weight:800;letter-spacing:.06em;padding:5px 10px;border-radius:999px;color:var(--soil)}
+.t-design{background:var(--lime)}.t-content{background:var(--coral)}.t-channel{background:var(--sky)}.t-event{background:var(--sand)}
+.w.hide{display:none}
+/* 상세 */
+.veil{position:fixed;inset:0;background:rgba(10,7,5,.78);backdrop-filter:blur(6px);z-index:80;display:none;align-items:center;justify-content:center;padding:30px}
+.veil.on{display:flex}
+.case{background:var(--cream);color:var(--soil);border-radius:16px;max-width:1040px;width:100%;max-height:88vh;overflow:auto;display:grid;grid-template-columns:1.1fr 1fr;animation:pop .4s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{transform:translateY(30px) scale(.97);opacity:0}}
+.case .ci{background:#fff;display:flex;align-items:center;justify-content:center}
+.case .ci img{width:100%;height:auto;display:block}
+.case .cb{padding:40px 38px}
+.case .cb .yr{font-family:'Instrument Serif',serif;font-size:22px;opacity:.6}
+.case h3{font-size:30px;font-weight:900;letter-spacing:-.02em;line-height:1.25;margin:6px 0 4px}
+.case .cl{font-size:15px;opacity:.65}
+.case dl{margin-top:26px;display:grid;gap:18px}
+.case dt{font-family:'Instrument Serif',serif;font-style:italic;font-size:22px}
+.case dd{font-size:15.5px;line-height:1.7;font-weight:600;opacity:.85}
+.case .x{position:fixed;top:22px;right:26px;border:0;background:var(--lime);width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;font-weight:900}
+.case .tags span{color:var(--soil)}
+.end{text-align:center;padding:90px 0 120px}
+.end h2{font-size:clamp(48px,7vw,110px)}
+@media(max-width:1000px){.grid{columns:2}.case{grid-template-columns:1fr}}
+@media(max-width:600px){.grid{columns:1}.case .cb{padding:28px 24px}}
+</style>
+</head>
+<body>
+<header><b><a href="./">keda</a></b><nav><a href="about.html">About</a><a href="work.html" class="on">Work</a><a href="about.html#contact">Contact</a></nav></header>
+
+<div class="wrap">
+ <div class="hero">
+  <span class="lab">Selected Work</span>
+  <h1>Things we <i>dug up.</i></h1>
+  <p>로고 하나부터 행사 하루까지. 캐다가 캐내고 닦아 사람들 앞에 놓은 것들입니다.</p>
+  <div class="filters" id="filters"></div>
+  <div class="sticker" style="right:3%;top:20%;width:clamp(120px,13vw,200px);--r2:-8deg"><svg viewBox="0 0 220 220"><defs><path id="b1" d="M110 110 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs><circle cx="110" cy="110" r="104" fill="#ff6a4d" stroke="#17120e" stroke-width="5"/><text font-family="Pretendard,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#fff"><textPath href="#b1">DIG DEEPER • FIND THE VALUE • </textPath></text><g transform="rotate(-30 110 110)"><rect x="104" y="58" width="12" height="60" rx="5" fill="#17120e"/><path d="M92 54 h36" stroke="#17120e" stroke-width="10" stroke-linecap="round"/><path d="M88 118 h44 v14 q0 30 -22 38 q-22 -8 -22 -38z" fill="#fff" stroke="#17120e" stroke-width="5"/></g></svg></div>
+ </div>
+ <div class="grid" id="grid"></div>
+</div>
+
+<div class="end"><div class="wrap">
+ <span class="lab" style="justify-content:center">Next</span>
+ <h2 class="serif">Your brand, <i style="color:var(--lime)">next.</i></h2>
+ <a class="cta" href="about.html#contact">같이 캐 보기 →</a>
+</div></div>
+
+<footer><span>© 2026 keda Co., Ltd. — We Dig Your Brand</span><span>Brand Content Studio · Incheon, Korea</span></footer>
+
+<div class="veil" id="veil"><div class="case" id="case"></div></div>
+
+<script>
+// 작업 목록 — 새 작업은 여기 한 줄씩 추가 (img/work/ 에 그림 넣기)
+const CAT = { design: 'Design', content: 'Content', channel: 'Channel', event: 'Event' };
+const WORK = [
+  { img: 'songrim.jpg', t: '2026 인천송림 소공인 성과보고대회', c: '인천송림 소공인특화지원센터', y: 2026, cat: ['event', 'design'],
+    dig: '한 해 동안 센터와 소공인이 함께 만든 성과를, 하루의 무대에서 한눈에 보여 줘야 했습니다.',
+    made: '키비주얼 포스터, 식순지, 발표·시상 화면, 행사 진행 전반.' },
+  { img: 'wanju_forum.jpg', t: '특별한 완주 프로젝트 — 1차 포럼', c: '완주 · 지역 브랜딩 프로젝트', y: 2026, cat: ['event', 'content'],
+    dig: '지역의 사람과 가게가 가진 이야기를 한자리에 모으는 첫 번째 자리.',
+    made: '포럼 기획·연사 구성·현장 운영, 사진 기록과 보도 콘텐츠.' },
+  { img: 'wanju_class.jpg', t: '원데이특강 「홈페이지형 블로그 만들기」', c: '완주 · 특별한 완주 프로젝트', y: 2026, cat: ['event', 'channel'],
+    dig: '하루 만에 내 가게의 공식 브랜드 채널을 갖게 만드는 수업.',
+    made: '홍보 포스터, 신청 폼과 QR, 실습 교재, 당일 특강 진행.' },
+  { img: 'joshua_poster.jpg', t: '입시설명회 포스터 & 홍보 영상', c: '조슈아영어', y: 2026, cat: ['design', 'content'],
+    dig: '“같은 교실, 다른 커리큘럼” — 아이마다 맞춤이라는 강점을 한 장에 담는 일.',
+    made: '설명회 포스터와 홍보 영상, 가맹점별 버전.' },
+  { img: 'joshua_grammar.jpg', t: '문법책 표지 시리즈 10종', c: '조슈아영어', y: 2026, cat: ['design'], r: '.8deg',
+    dig: '단계가 올라갈수록 색이 바뀌는, 모으고 싶어지는 교재.',
+    made: '레벨별 컬러 시스템과 표지 10종.' },
+  { img: 'saemaul_logo.jpg', t: '새마을국수 브랜드 로고', c: '새마을국수', y: 2026, cat: ['design'],
+    dig: '면발이 그리는 ‘새마을’의 ㅅ — 오래된 동네 국숫집의 정을 하나의 모양으로.',
+    made: '로고·심볼·컬러 가이드, 포장지와 간판 레터링 시안.' },
+  { img: 'joshua_words.jpg', t: '1등급 단어장 표지 16종', c: '조슈아영어', y: 2026, cat: ['design'], r: '-.8deg',
+    dig: '16권을 나란히 꽂았을 때 하나의 그라데이션이 되도록.',
+    made: '단어장 표지 16종 시리즈.' },
+  { img: 'onsaemi.jpg', t: '온새미 베이커리 홈페이지형 블로그', c: '온새미 베이커리', y: 2026, cat: ['channel', 'design'],
+    dig: '매일 아침 정직하게 굽는 빵 — 블로그 첫 화면에서 그 냄새가 나야 했습니다.',
+    made: '홈페이지형 블로그 스킨, 메뉴 위젯, 프로필 세팅.' },
+  { img: 'kpbn.jpg', t: '한국퍼스널브랜딩신문 KPBN', c: '한국퍼스널브랜딩신문', y: 2026, cat: ['content', 'channel', 'design'],
+    dig: '사람의 이름값을 기록하는 매체. 신문다운 무게와 퍼스널 브랜딩의 가벼움 사이.',
+    made: '로고 리뉴얼, 보도자료·칼럼 콘텐츠, 인스타·블로그 채널 운영.' },
+  { img: 'personal_os.jpg', t: '퍼스널 OS — 1인 대표의 AI 비서실', c: 'keda 자체 서비스', y: 2026, cat: ['channel', 'content'], link: 'https://kedakorea.github.io/personal-os/',
+    dig: 'AI를 배우는 대신, 내 일에 맞춘 비서실을 통째로 갖고 싶은 대표님들.',
+    made: '서비스 기획, 랜딩 페이지, 대시보드 샘플 8종, 세팅 매뉴얼.' },
+  { img: 'saemaul_pack.jpg', t: '새마을국수 포장지 & 간판 레터링', c: '새마을국수', y: 2026, cat: ['design'],
+    dig: '옛날 국수 포장지의 정겨움을 지금 가게에 맞게.',
+    made: '포장지·간판·세로 사인 레터링 시안.' },
+];
+const grid = document.getElementById('grid'), F = document.getElementById('filters');
+const tagHtml = (cs) => '<div class="tags">' + cs.map((k) => `<span class="t-${k}">${CAT[k]}</span>`).join('') + '</div>';
+WORK.forEach((w, i) => {
+  const d = document.createElement('article'); d.className = 'w rv'; d.dataset.cat = w.cat.join(' ');
+  if (w.r) d.style.setProperty('--r', w.r);
+  d.innerHTML = `<div class="im"><img loading="lazy" src="img/work/${w.img}" alt=""><span class="num">${String(i + 1).padStart(2, '0')}</span></div><div class="meta"><h3></h3><p class="cl"></p>${tagHtml(w.cat)}</div>`;
+  d.querySelector('h3').textContent = w.t; d.querySelector('.cl').textContent = w.c + ' · ' + w.y;
+  d.onclick = () => openCase(w);
+  grid.append(d);
+});
+// 필터
+[['all', 'All']].concat(Object.entries(CAT)).forEach(([k, label], i) => {
+  const n = k === 'all' ? WORK.length : WORK.filter((w) => w.cat.includes(k)).length;
+  const b = document.createElement('button'); b.innerHTML = `${label}<sup>${n}</sup>`; if (!i) b.classList.add('on');
+  b.onclick = () => { F.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b)); grid.querySelectorAll('.w').forEach((el) => el.classList.toggle('hide', k !== 'all' && !el.dataset.cat.includes(k))); };
+  F.append(b);
+});
+// 상세
+const veil = document.getElementById('veil'), box = document.getElementById('case');
+function openCase(w) {
+  box.innerHTML = `<div class="ci"><img src="img/work/${w.img}" alt=""></div><div class="cb"><span class="yr">${w.y}</span><h3></h3><p class="cl"></p>${tagHtml(w.cat)}<dl><dt>What we dug</dt><dd class="a"></dd><dt>What we made</dt><dd class="b"></dd></dl>${w.link ? `<p style="margin-top:26px"><a class="cta" style="background:var(--soil);color:var(--cream)" href="${w.link}" target="_blank" rel="noopener">사이트 보기 →</a></p>` : ''}</div><button class="x" aria-label="닫기">✕</button>`;
+  box.querySelector('h3').textContent = w.t; box.querySelector('.cl').textContent = w.c;
+  box.querySelector('.a').textContent = w.dig; box.querySelector('.b').textContent = w.made;
+  box.querySelector('.x').onclick = close; veil.classList.add('on'); document.body.style.overflow = 'hidden';
+}
+function close() { veil.classList.remove('on'); document.body.style.overflow = ''; }
+veil.onclick = (e) => { if (e.target === veil) close(); };
+addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+// 나타나기
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+</script>
+</body>
+</html>

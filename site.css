@@ -1,0 +1,38 @@
+/* keda — About · Work 공통 (2026-10-13) */
+:root{--soil:#17120e;--soil2:#211a14;--cream:#f2e8d6;--lime:#d6f25c;--coral:#ff6a4d;--sky:#9fd3ff;--sand:#e9c99a;--line:rgba(242,232,214,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--soil);color:var(--cream);font-family:Pretendard,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 34px;font-size:14px;mix-blend-mode:difference;color:#fff}
+header b a{font-weight:700;letter-spacing:.02em;text-decoration:none}
+header nav{display:flex;gap:26px}header nav a{text-decoration:none;position:relative}
+header nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:#fff}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto;padding:0 34px}
+.lab{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;display:flex;align-items:center;gap:10px}
+.lab::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:140px 0 70px;position:relative}
+.hero h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(64px,11vw,190px);line-height:.9;letter-spacing:-.02em;margin-top:22px}
+.hero h1 i{color:var(--lime)}
+.hero p{font-size:clamp(18px,1.8vw,24px);font-weight:700;margin-top:28px;max-width:640px;line-height:1.5;opacity:.9}
+.sticker{position:absolute;filter:drop-shadow(0 14px 22px rgba(0,0,0,.45));animation:float 6s ease-in-out infinite}
+.sticker svg{display:block;width:100%;height:auto}
+@keyframes float{50%{transform:translateY(-12px) rotate(var(--r2,4deg))}}
+section{padding:110px 0;border-top:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(44px,6vw,96px);line-height:.95;letter-spacing:-.01em;margin:18px 0 34px}
+h2 i{color:var(--lime)}
+.big{font-size:clamp(22px,2.6vw,38px);font-weight:800;line-height:1.45;letter-spacing:-.02em}
+.big span{color:var(--lime)}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;background:var(--lime);color:var(--soil);font-weight:800;text-decoration:none;font-size:16px;transition:transform .2s}
+.cta:hover{transform:translateY(-3px) rotate(-1deg)}
+.cta.ghost{background:none;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream)}
+footer{border-top:1px solid var(--line);padding:40px 34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;opacity:.6}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;font-family:'Instrument Serif',serif;font-size:clamp(34px,4vw,64px)}
+.marquee div{display:inline-block;animation:mq 26s linear infinite}
+.marquee i{color:var(--lime);font-style:italic}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(max-width:700px){header{padding:16px 18px}header nav{gap:14px;font-size:12px}.wrap{padding:0 18px}section{padding:76px 0}footer{padding:28px 18px}}
+@media(max-width:700px){.hero .sticker{width:78px !important;top:64px !important;right:14px !important}}
