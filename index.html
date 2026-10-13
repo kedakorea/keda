@@ -27,6 +27,10 @@ header nav{display:flex;gap:26px}header nav a{color:inherit;text-decoration:none
 .card.p{width:clamp(130px,13vw,210px);overflow:hidden;background:#fff;padding:7px 7px 22px}
 .card.p img{display:block;width:100%;height:auto;pointer-events:none}
 .card.p span{position:absolute;left:9px;bottom:5px;font-size:10px;color:#555;font-weight:600}
+.card.s{background:none;box-shadow:none;width:clamp(130px,12vw,190px);filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
+.card.s svg{display:block;width:100%;height:auto;pointer-events:none}
+.card.s.sm{width:clamp(70px,6vw,100px)}
+.card.s:active{box-shadow:none;filter:drop-shadow(0 22px 30px rgba(0,0,0,.6))}
 .hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:13px;opacity:.6;letter-spacing:.04em;white-space:nowrap}
 .hint i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);margin-right:8px;animation:pulse 1.4s infinite}
 @keyframes pulse{50%{transform:scale(1.8);opacity:.3}}
@@ -34,7 +38,7 @@ header nav{display:flex;gap:26px}header nav a{color:inherit;text-decoration:none
 .after p{font-size:clamp(26px,3.6vw,52px);font-weight:800;line-height:1.35;letter-spacing:-.02em}
 .after p span{color:var(--lime)}
 @media(max-width:700px){header{padding:16px 18px}header nav{gap:14px;font-size:12px}.sub{top:62px;left:18px;right:18px;font-size:11px}.sub span:last-child{display:none}
-.logo{top:17vh;width:88vw}.slogan{top:52vh}.card.m{width:170px;padding:16px;font-size:15px}.card.p{width:110px}}
+.logo{top:17vh;width:88vw}.slogan{top:52vh}.card.m{width:170px;padding:16px;font-size:15px}.card.p{width:110px}.card.s{width:100px}.card.s.sm{width:56px}}
 </style>
 </head>
 <body>
@@ -46,15 +50,28 @@ header nav{display:flex;gap:26px}header nav a{color:inherit;text-decoration:none
  <h1 class="slogan">We <i>Dig</i> Your Brand.<small>브랜드를 캐다 — 이미 있던 가치를, 꺼내 닦습니다</small></h1>
 
  <div class="card m" style="background:var(--lime)" data-x="6" data-y="54" data-r="-7">보이지 않던 가치를,<br>꺼냅니다.<em>Unearth</em></div>
- <div class="card p" data-x="27" data-y="50" data-r="5"><img src="img/w1.jpg" alt=""><span>Event · 성과보고대회</span></div>
+ <div class="card s" data-x="27" data-y="50" data-r="5"><svg viewBox="0 0 220 220"><defs><path id="st1" d="M110 110 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>
+<circle cx="110" cy="110" r="104" fill="#d6f25c" stroke="#17120e" stroke-width="5"/>
+<text font-family="Pretendard,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#17120e"><textPath href="#st1">WE DIG YOUR BRAND • WE DIG YOUR BRAND •</textPath></text>
+<circle cx="110" cy="110" r="44" fill="none" stroke="#17120e" stroke-width="4"/><ellipse cx="96" cy="100" rx="5" ry="9" fill="#17120e"/><ellipse cx="124" cy="100" rx="5" ry="9" fill="#17120e"/><path d="M88 118 Q110 142 132 118" fill="none" stroke="#17120e" stroke-width="5" stroke-linecap="round"/><path d="M150 18 A132 132 0 0 1 196 30 L176 64 Z" fill="#fff" opacity=".9"/><path d="M150 18 L176 64 L196 30" fill="none" stroke="#17120e" stroke-width="3"/></svg></div>
  <div class="card m" style="background:var(--coral)" data-x="38" data-y="62" data-r="3">없던 걸 만들지 않아요.<br>있던 걸 캐냅니다.<em>Dig, don't fake</em></div>
- <div class="card p" data-x="58" data-y="48" data-r="-4"><img src="img/w2.jpg" alt=""><span>Poster · 조슈아영어</span></div>
+ <div class="card s" data-x="58" data-y="48" data-r="-4"><svg viewBox="0 0 220 220"><defs><path id="st2" d="M110 110 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>
+<circle cx="110" cy="110" r="104" fill="#ff6a4d" stroke="#17120e" stroke-width="5"/>
+<text font-family="Pretendard,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#fff"><textPath href="#st2">DIG DEEPER • FIND THE VALUE • </textPath></text>
+<g transform="rotate(-30 110 110)"><rect x="104" y="58" width="12" height="60" rx="5" fill="#17120e"/><path d="M92 54 h36" stroke="#17120e" stroke-width="10" stroke-linecap="round"/><path d="M88 118 h44 v14 q0 30 -22 38 q-22 -8 -22 -38z" fill="#fff" stroke="#17120e" stroke-width="5"/></g><path d="M150 18 A132 132 0 0 1 196 30 L176 64 Z" fill="#fff" opacity=".9"/><path d="M150 18 L176 64 L196 30" fill="none" stroke="#17120e" stroke-width="3"/></svg></div>
  <div class="card m" style="background:var(--sky)" data-x="70" data-y="60" data-r="6">기획부터 현장까지,<br>한 획으로.<em>One stroke</em></div>
  <div class="card m" style="background:var(--cream)" data-x="16" data-y="70" data-r="4">주인공은 언제나,<br>당신의 브랜드.<em>yours, lowercase</em></div>
- <div class="card p" data-x="84" data-y="45" data-r="8"><img src="img/w3.jpg" alt=""><span>Class · 완주 특강</span></div>
+ <div class="card s" data-x="84" data-y="45" data-r="8"><svg viewBox="0 0 220 220"><defs><path id="st3" d="M110 110 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>
+<circle cx="110" cy="110" r="104" fill="#9fd3ff" stroke="#17120e" stroke-width="5"/>
+<text font-family="Pretendard,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#17120e"><textPath href="#st3">KEDA • HIDDEN GEMS INSIDE • </textPath></text>
+<path d="M78 92 l14 -18 h36 l14 18 l-32 46z" fill="#fff" stroke="#17120e" stroke-width="5" stroke-linejoin="round"/><path d="M78 92 h64 M92 74 l18 64 M128 74 l-18 64" stroke="#17120e" stroke-width="3" fill="none"/><path d="M150 18 A132 132 0 0 1 196 30 L176 64 Z" fill="#fff" opacity=".9"/><path d="M150 18 L176 64 L196 30" fill="none" stroke="#17120e" stroke-width="3"/></svg></div>
  <div class="card m" style="background:var(--sand)" data-x="54" data-y="74" data-r="-5">Design · Content<br>Channel · Event<em>what we dig with</em></div>
- <div class="card p" data-x="3" data-y="38" data-r="-9"><img src="img/w4.jpg" alt=""><span>Book · 문법책 표지</span></div>
+ <div class="card s" data-x="3" data-y="38" data-r="-9"><svg viewBox="0 0 220 220"><polygon points="210.0,110.0 189.2,131.2 196.6,160.0 168.0,168.0 160.0,196.6 131.2,189.2 110.0,210.0 88.8,189.2 60.0,196.6 52.0,168.0 23.4,160.0 30.8,131.2 10.0,110.0 30.8,88.8 23.4,60.0 52.0,52.0 60.0,23.4 88.8,30.8 110.0,10.0 131.2,30.8 160.0,23.4 168.0,52.0 196.6,60.0 189.2,88.8 " fill="#f2e8d6" stroke="#17120e" stroke-width="5" stroke-linejoin="round"/>
+<text x="110" y="100" text-anchor="middle" font-family="Instrument Serif,serif" font-style="italic" font-size="44" fill="#17120e">brand</text><text x="110" y="142" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="900" font-size="30" fill="#17120e">를 캐다!</text></svg></div>
 
+ <div class="card s sm" data-x="47" data-y="40" data-r="-12"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="#ff6a4d" stroke="#17120e" stroke-width="4"/><path d="M60 30 v52 M40 64 l20 20 l20 -20" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+ <div class="card s sm" data-x="92" data-y="70" data-r="10"><svg viewBox="0 0 120 120"><rect x="8" y="22" width="104" height="76" rx="38" fill="#d6f25c" stroke="#17120e" stroke-width="4"/><text x="60" y="70" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="900" font-size="22" fill="#17120e">ONE</text><text x="60" y="90" text-anchor="middle" font-family="Instrument Serif,serif" font-style="italic" font-size="18" fill="#17120e">stroke</text></svg></div>
+ <div class="card s sm" data-x="33" data-y="80" data-r="6"><svg viewBox="0 0 120 120"><path d="M60 10 l12 34 36 2 -28 22 10 36 -30 -20 -30 20 10 -36 -28 -22 36 -2z" fill="#9fd3ff" stroke="#17120e" stroke-width="4" stroke-linejoin="round"/></svg></div>
  <p class="hint"><i></i>카드를 치워 보세요 · drag &amp; dig</p>
 </div></section>
 
