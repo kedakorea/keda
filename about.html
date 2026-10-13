@@ -59,7 +59,13 @@
 .hero .lead{max-width:none}
 /* 인증 */
 .creds{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.cred{padding:14px 20px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--cream);font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px}
+.cred{padding:14px 20px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--cream);font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;border:0;background:none;color:var(--cream);font-family:Pretendard,sans-serif;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.cred em{font-style:normal;opacity:.5;font-size:13px}.cred:hover{background:var(--cream);color:var(--soil);transform:translateY(-2px)}
+.cveil{position:fixed;inset:0;z-index:90;background:rgba(10,7,5,.8);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px}.cveil.on{display:flex}
+.cbox{position:relative;background:var(--cream);color:var(--soil);border-radius:14px;padding:22px 22px 16px;max-width:620px;width:100%;max-height:92vh;display:flex;flex-direction:column;gap:12px;animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{transform:translateY(24px) scale(.97);opacity:0}}
+.cbox .ct{font-size:17px;font-weight:900;padding-right:40px}.cbox img{width:100%;min-height:0;flex:1;object-fit:contain;background:#fff;border-radius:6px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}.cbox .cn{font-size:12px;opacity:.6}
+.cbox .cx{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:0;background:var(--lime);font-weight:900;cursor:pointer}
 .cred i{width:10px;height:10px;border-radius:50%;background:var(--c)}
 .who{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:60px;padding:34px;border-radius:14px;background:var(--soil2)}
 .who .av{width:130px;height:130px;border-radius:50%;background:var(--lime);color:var(--soil);display:grid;place-items:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:46px}
@@ -146,11 +152,14 @@ footer .fl a{color:inherit;text-decoration:none;margin-left:16px}footer .fl a:ho
  <span class="lab rv">Trust</span>
  <p class="big rv" style="margin-top:22px">기관·기업부터 <span>한 사람의 브랜드</span>까지 함께 일합니다.</p>
  <div class="creds rv">
-  <span class="cred" style="--c:var(--lime)"><i></i>여성기업 확인</span>
-  <span class="cred" style="--c:var(--coral)"><i></i>중소기업 확인</span>
-  <span class="cred" style="--c:var(--sky)"><i></i>산업디자인전문회사 신고</span>
-  <span class="cred" style="--c:var(--sand)"><i></i>직접생산확인 (디자인서비스)</span>
+  <button type="button" class="cred" data-img="women" data-t="여성기업 확인서" style="--c:var(--lime)"><i></i>여성기업 확인<em>↗</em></button>
+  <button type="button" class="cred" data-img="sme" data-t="중소기업 확인서 [소기업(소상공인)]" style="--c:var(--coral)"><i></i>중소기업 확인<em>↗</em></button>
+  <button type="button" class="cred" data-img="design_firm" data-t="산업디자인전문회사 신고확인증" style="--c:var(--sky)"><i></i>산업디자인전문회사 신고<em>↗</em></button>
+  <button type="button" class="cred" data-img="direct_prod" data-t="직접생산확인증명서 (디자인서비스)" style="--c:var(--sand)"><i></i>직접생산확인 (디자인서비스)<em>↗</em></button>
+  <button type="button" class="cred" data-img="software" data-t="소프트웨어사업자 일반 현황 관리확인서" style="--c:var(--lime)"><i></i>소프트웨어사업자 확인<em>↗</em></button>
+  <button type="button" class="cred" data-img="escrow" data-t="구매안전서비스 이용 확인증" style="--c:var(--coral)"><i></i>구매안전서비스 이용 확인<em>↗</em></button>
  </div>
+ <div class="cveil" id="cveil"><div class="cbox"><button type="button" class="cx" aria-label="닫기">✕</button><b class="ct"></b><img alt=""><p class="cn">개인정보 보호를 위해 발급·확인번호 등 일부 정보는 가렸습니다.</p></div></div>
  <div class="who rv">
   <div class="av">yj</div>
   <div><h4>최유정<small>CEO | Creative Director</small></h4>
@@ -172,6 +181,11 @@ footer .fl a{color:inherit;text-decoration:none;margin-left:16px}footer .fl a:ho
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+</script>
+<script>
+(function(){const v=document.getElementById('cveil'),im=v.querySelector('img'),t=v.querySelector('.ct');
+document.querySelectorAll('.cred[data-img]').forEach(b=>b.onclick=()=>{im.src='img/cert/'+b.dataset.img+'.jpg';t.textContent=b.dataset.t;v.classList.add('on');document.body.style.overflow='hidden'});
+const close=()=>{v.classList.remove('on');document.body.style.overflow=''};v.querySelector('.cx').onclick=close;v.onclick=e=>{if(e.target===v)close()};addEventListener('keydown',e=>{if(e.key==='Escape')close()});})();
 </script>
 </body>
 </html>
