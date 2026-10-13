@@ -37,7 +37,7 @@
 .row p{font-size:16px;line-height:1.65;opacity:.85}
 .row .ar{font-size:26px;transition:transform .3s}.row:hover .ar{transform:rotate(-45deg)}
 /* 과정 */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
 .step{padding:30px 26px 34px;border-left:1px solid var(--line);position:relative}
 .step:first-child{border-left:0}
 .step .ic{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:28px;margin-bottom:22px;background:var(--c);color:var(--soil)}
@@ -46,6 +46,12 @@
 .step p{font-size:15px;line-height:1.65;opacity:.8}
 .step::after{content:"→";position:absolute;right:-12px;top:46px;font-size:22px;opacity:.4}
 .step:last-child::after{display:none}
+.step.run{background:var(--soil2);border-radius:12px}
+.step.run a{display:inline-block;margin-top:14px;font-size:14px;font-weight:800;color:var(--lime);text-decoration:none}
+.row.new{text-decoration:none;color:inherit;background:linear-gradient(90deg,rgba(214,242,92,.08),transparent 60%)}
+.row.new .n{font-family:Pretendard;font-size:12px;font-weight:900;letter-spacing:.1em;background:var(--lime);color:var(--soil);padding:5px 8px;border-radius:999px;opacity:1;justify-self:start}
+.row.new p b{color:var(--lime)}.row.new:hover p b{color:var(--soil)}
+.hero .lead{max-width:none}
 /* 인증 */
 .creds{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .cred{padding:14px 20px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--cream);font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px}
@@ -60,7 +66,7 @@
 .contact .big{margin:0 auto 40px;max-width:760px}
 .contact .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .contact .addr{margin-top:40px;font-size:14px;opacity:.55;line-height:1.8}
-@media(max-width:900px){.name{grid-template-columns:1fr;gap:20px}.notes{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(3){border-left:0}.step::after{display:none}
+@media(max-width:900px){.name{grid-template-columns:1fr;gap:20px}.notes{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(odd){border-left:0}.hero .lead br{display:none}.step::after{display:none}
 .row{grid-template-columns:44px 1fr 30px}.row p{grid-column:2/4;margin-top:-10px}.who{grid-template-columns:1fr;text-align:center}.who .av{margin:0 auto}}
 @media(max-width:560px){.notes,.steps{grid-template-columns:1fr}.step{border-left:0;border-top:1px solid var(--line)}}
 </style>
@@ -72,9 +78,9 @@
  <div class="hero">
   <span class="lab">About keda</span>
   <h1>We don't make it up.<br><i>We dig it up.</i></h1>
-  <p>없던 걸 지어내지 않습니다. 이미 있던 가치를 캐냅니다.<br>디자인부터 행사 현장까지, 브랜드의 모든 접점을 만드는 브랜드 콘텐츠 스튜디오.</p>
-  <div class="sticker" style="right:4%;top:22%;width:clamp(120px,14vw,210px);--r2:8deg"><svg viewBox="0 0 220 220"><defs><path id="a1" d="M110 110 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs><circle cx="110" cy="110" r="104" fill="#d6f25c" stroke="#17120e" stroke-width="5"/><text font-family="Pretendard,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#17120e"><textPath href="#a1">WE DIG YOUR BRAND • WE DIG YOUR BRAND •</textPath></text><circle cx="110" cy="110" r="44" fill="none" stroke="#17120e" stroke-width="4"/><ellipse cx="96" cy="100" rx="5" ry="9" fill="#17120e"/><ellipse cx="124" cy="100" rx="5" ry="9" fill="#17120e"/><path d="M88 118 Q110 142 132 118" fill="none" stroke="#17120e" stroke-width="5" stroke-linecap="round"/></svg></div>
-  <div class="sticker" style="right:22%;top:12%;width:clamp(70px,7vw,110px);animation-delay:-2s;--r2:-10deg"><svg viewBox="0 0 120 120"><path d="M60 10 l12 34 36 2 -28 22 10 36 -30 -20 -30 20 10 -36 -28 -22 36 -2z" fill="#ff6a4d" stroke="#17120e" stroke-width="4" stroke-linejoin="round"/></svg></div>
+  <p class="lead">없던 걸 지어내지 않습니다. 이미 있던 가치를 캐냅니다.<br>디자인부터 행사 현장까지, 브랜드의 모든 접점을 만드는<br>브랜드 콘텐츠 스튜디오.</p>
+  <div class="sticker" style="right:4%;bottom:60px;width:clamp(120px,13vw,200px);--r2:8deg"><svg viewBox="0 0 220 220"><defs><path id="a1" d="M110 110 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs><circle cx="110" cy="110" r="104" fill="#d6f25c" stroke="#17120e" stroke-width="5"/><text font-family="Pretendard,sans-serif" font-weight="900" font-size="19" letter-spacing="3" fill="#17120e"><textPath href="#a1">WE DIG YOUR BRAND • WE DIG YOUR BRAND •</textPath></text><circle cx="110" cy="110" r="44" fill="none" stroke="#17120e" stroke-width="4"/><ellipse cx="96" cy="100" rx="5" ry="9" fill="#17120e"/><ellipse cx="124" cy="100" rx="5" ry="9" fill="#17120e"/><path d="M88 118 Q110 142 132 118" fill="none" stroke="#17120e" stroke-width="5" stroke-linecap="round"/></svg></div>
+  <div class="sticker" style="right:calc(4% + clamp(120px,13vw,200px));bottom:150px;width:clamp(60px,5.5vw,90px);animation-delay:-2s;--r2:-10deg"><svg viewBox="0 0 120 120"><path d="M60 10 l12 34 36 2 -28 22 10 36 -30 -20 -30 20 10 -36 -28 -22 36 -2z" fill="#ff6a4d" stroke="#17120e" stroke-width="4" stroke-linejoin="round"/></svg></div>
  </div>
 </div>
 
@@ -104,31 +110,33 @@
 
 <section><div class="wrap">
  <span class="lab rv">What we dig with</span>
- <h2 class="rv">Four <i>shovels.</i></h2>
- <p class="big rv" style="margin:-14px 0 30px">캐다가 쓰는 네 개의 삽</p>
+ <h2 class="rv">Four shovels, <i>and a new one.</i></h2>
+ <p class="big rv" style="margin:-14px 0 30px">캐다가 쓰는 네 개의 삽, 그리고 <span>새로 만든 하나</span></p>
  <div class="svc">
   <div class="row rv" style="--c:var(--lime)"><span class="n">01</span><h3>BRAND DESIGN<small>브랜드 디자인</small></h3><p>로고·패키지·포스터·인쇄물. 브랜드가 한눈에 읽히는 모양을 만듭니다.</p><span class="ar">→</span></div>
   <div class="row rv" style="--c:var(--coral)"><span class="n">02</span><h3>CONTENT CREATION<small>콘텐츠 제작</small></h3><p>카드뉴스·상세페이지·영상·보도자료. 매일 쌓이는 브랜드의 이야기를 씁니다.</p><span class="ar">→</span></div>
   <div class="row rv" style="--c:var(--sky)"><span class="n">03</span><h3>CHANNEL GROWTH<small>채널 운영</small></h3><p>홈페이지형 블로그·SNS·카카오 채널. 사람들이 찾아오는 길을 냅니다.</p><span class="ar">→</span></div>
   <div class="row rv" style="--c:var(--sand)"><span class="n">04</span><h3>EVENT PRODUCTION<small>행사 기획·운영</small></h3><p>포럼·성과보고회·특강. 기획부터 현장 운영까지 한 팀이 끝까지 갑니다.</p><span class="ar">→</span></div>
+  <a class="row rv new" href="https://kedakorea.github.io/personal-os/" target="_blank" rel="noopener" style="--c:var(--cream)"><span class="n">NEW</span><h3>PERSONAL OS<small>퍼스널 OS · BRANDiUM</small></h3><p>캐다가 쓰는 일하는 방식을 대표님 컴퓨터에 그대로 세팅합니다. 말 한마디면 부서별 AI 비서가 움직이는 1인 대표의 업무 시스템 — <b>브랜디움(BRANDiUM)</b>을 통해 선보입니다.</p><span class="ar">↗</span></a>
  </div>
 </div></section>
 
 <section><div class="wrap">
  <span class="lab rv">How we dig</span>
- <h2 class="rv">Dig, unearth, <i>polish,</i> show.</h2>
- <p class="big rv" style="margin:-14px 0 30px">캐고, 꺼내고, 닦고, <span>보여줍니다.</span></p>
+ <h2 class="rv">Dig, unearth, <i>polish,</i> show — <i>run.</i></h2>
+ <p class="big rv" style="margin:-14px 0 30px">캐고, 꺼내고, 닦고, 보여주고, <span>계속 굴러가게.</span></p>
  <div class="steps">
   <div class="step rv" style="--c:var(--lime)"><div class="ic">⛏</div><em>Dig</em><h4>캐기</h4><p>대화와 자료 속에서 브랜드가 이미 가진 가치를 찾습니다.</p></div>
   <div class="step rv" style="--c:var(--coral)"><div class="ic">✦</div><em>Unearth</em><h4>꺼내기</h4><p>찾은 것을 한 문장의 메시지와 기획으로 정리합니다.</p></div>
   <div class="step rv" style="--c:var(--sky)"><div class="ic">◆</div><em>Polish</em><h4>닦기</h4><p>디자인과 콘텐츠로 또렷하고 단단하게 다듬습니다.</p></div>
   <div class="step rv" style="--c:var(--sand)"><div class="ic">☺</div><em>Show</em><h4>보여주기</h4><p>채널과 현장에서, 필요한 사람들 앞에 놓습니다.</p></div>
+  <div class="step rv run" style="--c:var(--cream)"><div class="ic">⚙</div><em>Run</em><h4>굴리기</h4><p>퍼스널 OS로, 대표님 혼자서도 매일 굴러가는 업무 시스템을 세팅합니다.</p><a href="https://kedakorea.github.io/personal-os/" target="_blank" rel="noopener">퍼스널 OS 보기 ↗</a></div>
  </div>
 </div></section>
 
 <section><div class="wrap">
  <span class="lab rv">Trust</span>
- <p class="big rv" style="margin-top:22px">인천 부평에서, <span>기관·기업·개인 브랜드</span>와 함께 일합니다.</p>
+ <p class="big rv" style="margin-top:22px">기관·기업부터 <span>한 사람의 브랜드</span>까지 함께 일합니다.</p>
  <div class="creds rv">
   <span class="cred" style="--c:var(--lime)"><i></i>여성기업 확인</span>
   <span class="cred" style="--c:var(--coral)"><i></i>중소기업 확인</span>

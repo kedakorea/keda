@@ -2,7 +2,7 @@
 :root{--soil:#17120e;--soil2:#211a14;--cream:#f2e8d6;--lime:#d6f25c;--coral:#ff6a4d;--sky:#9fd3ff;--sand:#e9c99a;--line:rgba(242,232,214,.14)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--soil);color:var(--cream);font-family:Pretendard,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--soil);color:var(--cream);font-family:Pretendard,sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 34px;font-size:14px;mix-blend-mode:difference;color:#fff}
 header b a{font-weight:700;letter-spacing:.02em;text-decoration:none}
